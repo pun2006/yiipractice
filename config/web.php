@@ -12,11 +12,11 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'container' => [
-        'definitions' => [
-            'yii\grid\GridView' => ['formatter' => ['class' => 'app\components\gridNullFormat']],
-        ],
-    ],
+//     'container' => [
+//         'definitions' => [
+//             'yii\grid\GridView' => ['formatter' => ['class' => 'app\components\gridNullFormat']],
+//         ],
+//     ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -63,15 +63,11 @@ $config = [
                 ],
             ],
         ],
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'nullDisplay' => '[нет данных]',
+        ]
         
-//         'formatter' => [
-//             'class' => 'app\components\myformatter',
-//             'dateFormat' => 'dd.MM.yyyy',
-//             'decimalSeparator' => ',',
-//             'thousandSeparator' => ' ',
-//             'currencyCode' => 'EUR',
-//             ],
-                    
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
