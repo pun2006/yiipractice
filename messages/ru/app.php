@@ -23,5 +23,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    '(no data)' => '[нет данных]',
     '(not set)' => '[нет данных]',    
 ];

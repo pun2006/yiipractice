@@ -24,7 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
     GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'emptyText' => "MF",
+//         'formatter' => [
+//            'class'=>'app\components\gridNullFormat', 
+//         ] ,
+        'beforeRow' =>function ($model, $key, $index, $grid)
+        {
+        },
+            
         'columns' => [
             [
                 'attribute'=>'id'                
