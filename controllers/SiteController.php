@@ -136,22 +136,8 @@ class SiteController extends Controller
     }
     
     public function actionGridView() {
-        $searchModel = new ProductSearch();
-        $query = Products::find();
-        $dataProvider = $searchModel->search(Yii::$app->request->get());
-//         $provider = new ActiveDataProvider([
-//             'query' => $query,
-//             'pagination' => [
-//                 'pageSize' => 10,
-//             ],
-//             'sort' => [
-//                 'defaultOrder' => [
-//                     'id' => SORT_DESC,
-//                     'categoryId' => SORT_ASC,
-//                 ]
-//             ],
-//         ]);
-        
+        $searchModel = new ProductSearch();        
+        $dataProvider = $searchModel->search(Yii::$app->request->get());        
         return $this->render('gridview',['dataProvider'=>$dataProvider,'searchModel'=>$searchModel]);
     }
 }

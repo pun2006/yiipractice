@@ -24,9 +24,7 @@ class m190611_044151_phones extends Migration
 
     public function down()
     {
-        $this->dropTable('phones');
-
-        return false;
+        $this->dropTable('phones');     
     }
     
 }

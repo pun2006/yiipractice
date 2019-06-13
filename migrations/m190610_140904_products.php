@@ -17,6 +17,7 @@ class m190610_140904_products extends Migration
             'price' =>$this->integer(),
             'hidden' => $this->integer(),
         ]);
+        $this->insert('products', ['categoryId'=>'','price'=>'50','hidden'=>'1']);
         $this->insert('products', ['categoryId'=>'1','price'=>'100','hidden'=>'1']);
         $this->insert('products', ['categoryId'=>'2','price'=>'200','hidden'=>'1']);
         $this->insert('products', ['categoryId'=>'1','price'=>'300','hidden'=>'0']);
