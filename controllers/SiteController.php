@@ -131,6 +131,10 @@ class SiteController extends Controller
         return $this->render('about');
     }
     
+    public function actionHelpers() {
+        return $this->render('helpers');
+    }
+    
     public function actionTels() {
         return $this->render('tels');
     }
