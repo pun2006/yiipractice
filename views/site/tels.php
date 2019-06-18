@@ -4,7 +4,6 @@
 
 use yii\helpers\Html;
 use app\models\Phones;
-
 $this->title = 'Tels';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -14,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
     
     <?php
     $formatter=Yii::$app->get('phoneformatter');
-    $phones=Phones::find()->all();
+    $phones=Phones::find()->all();    
     foreach ($phones as $phone) {        
         echo '<p>'.$formatter->asPhone($phone['phone']).'</p>';        
     }
@@ -24,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php 
     $formatter=Yii::$app->get('phoneformatter');
     $formatter->prefix="+99";
-    $formatter->mask="P_000-000-0000";
+    $formatter->mask="P_000-000-0000";    
     foreach ($phones as $phone) {
         echo '<p>'.$formatter->asPhone($phone['phone']).'</p>';
     }

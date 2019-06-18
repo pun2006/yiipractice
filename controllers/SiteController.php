@@ -131,6 +131,17 @@ class SiteController extends Controller
         return $this->render('about');
     }
     
+    public function actionYuieditor()
+    {
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        }
+        
+        $model->password = '';        
+        return $this->render('yuieditor',['model'=>$model]);
+    }
+    
     public function actionHelpers() {
         return $this->render('helpers');
     }

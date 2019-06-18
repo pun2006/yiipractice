@@ -42,6 +42,8 @@ AppAsset::register($this);
             ['label' => 'formatter телефонного номера', 'url' => ['/site/tels']],
             ['label' => 'gridview', 'url' => ['/site/grid-view']],
             ['label' => 'helpers', 'url' => ['/site/helpers']],
+            ['label' => 'yuieditor', 'url' => ['/site/yuieditor']],
+            
             ['label' => 'About', 'url' => ['/site/about']],            
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (

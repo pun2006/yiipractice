@@ -1,6 +1,8 @@
 <?php
 namespace app\components;
 
+use yii\i18n\Formatter;
+
 /*
  * Приведение телефонного номера к формату.
  * Маску можно задать в конфигурации приложения, если этого не сделано,
@@ -9,7 +11,7 @@ namespace app\components;
  *  
  */
 
-class PhoneFormatter
+class PhoneFormatter extends Formatter
 {
     /**     
      *Формат маски:
@@ -31,7 +33,7 @@ class PhoneFormatter
      * @param string $mask
      * @param string $prefix
      */
-    public function __construct($mask = 'P (000)000 0000', $prefix = '+7')
+    public function __construct($mask = 'P (000)000 0000', $prefix = '+7',$config=[])
     {
         $this->mask = $mask;
         $this->prefix = $prefix;        
