@@ -41,6 +41,7 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'formatter телефонного номера', 'url' => ['/site/tels']],
             ['label' => 'gridview', 'url' => ['/site/grid-view']],
+            ['label' => 'gridview(ADP)', 'url' => ['/site/array-data']],
             ['label' => 'helpers', 'url' => ['/site/helpers']],
             ['label' => 'yuieditor', 'url' => ['/site/yuieditor']],
             

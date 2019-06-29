@@ -13,6 +13,9 @@ use yii\data\ArrayDataProvider;
 use app\models\Products;
 use yii\data\ActiveDataProvider;
 use app\models\ProductSearch;
+use app\helpers\XmlHelper;
+use app\models\AdpProduct;
+use app\models\AdpProductSearch;
 
 
 class SiteController extends Controller
@@ -154,5 +157,14 @@ class SiteController extends Controller
         $searchModel = new ProductSearch();        
         $dataProvider = $searchModel->search(Yii::$app->request->get());        
         return $this->render('gridview',['dataProvider'=>$dataProvider,'searchModel'=>$searchModel]);
+    }
+    
+    public function actionArrayData() {
+        $searchModel=new AdpProductSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->get());                
+        return $this->render('arraydata',['dataProvider'=>$dataProvider,'searchModel'=>$searchModel]);
+        
+//         return $this->render('arraydata',['dataProvider'=>null]);
+
     }
 }
